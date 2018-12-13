@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    container_name: coates-extension
+    container_name: coates-extension-backend
     restart: always
     build: .
     ports:
