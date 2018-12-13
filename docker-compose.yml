@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    container_name: generic-socket-server
+    container_name: coates-extension
     restart: always
     build: .
     ports:
