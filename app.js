@@ -19,7 +19,7 @@ const mongoose = require('mongoose');
 
 
 
-const Switchboard = require('./Models/switchboard')
+const Switchboard = require('./models/switchboard')
 
 const PORT = process.env.PORT || 3000
 

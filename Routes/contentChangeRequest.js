@@ -1,5 +1,5 @@
 const express = require('express')
-const ContentChangeRequest = require('./../Models/ContentChangeRequest')
+const ContentChangeRequest = require('./../models/ContentChangeRequest')
 const contentChangeRequestRouter = express.Router()
 
 contentChangeRequestRouter.route('/')
