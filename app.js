@@ -1,10 +1,25 @@
-const app = require('express')();
+// const app = require('express')();
+// const express = require('express') 
+
+
+const express = require('express')
+const app = express()
+
+const contentChangeRequestRouter = require('./Routes/contentChangeRequest')
+
+
+
+app.use('/api/ContentChangeRequest', contentChangeRequestRouter)
+
+
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const colors = require('colors');
 const mongoose = require('mongoose');
 
-const Switchboard = require('./models/switchboard')
+
+
+const Switchboard = require('./Models/switchboard')
 
 const PORT = process.env.PORT || 3000
 
