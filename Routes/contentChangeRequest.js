@@ -12,6 +12,8 @@ contentChangeRequestRouter.route('/')
                 console.log(err)
             })
     })
+
+contentChangeRequestRouter.route('/')
     .post((req, res) => {
         const changeRequest = new ContentChangeRequest(req.query);
         changeRequest.save();
@@ -28,6 +30,8 @@ contentChangeRequestRouter.route('/:id')
                 console.log(err)
             })
     }) 
+
+contentChangeRequestRouter.route('/:id')
     .put((req, res) => {
         ContentChangeRequest
             .findOneAndUpdate(req.params.id, req.query, {upsert:true}, (err, doc) => {
@@ -35,6 +39,8 @@ contentChangeRequestRouter.route('/:id')
                 res.json(doc)
             })
     }) 
+
+contentChangeRequestRouter.route('/:id')
     .delete((req, res) => {
         ContentChangeRequest
             .findById(req.params.id)
