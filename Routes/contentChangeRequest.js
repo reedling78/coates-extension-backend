@@ -8,9 +8,6 @@ contentChangeRequestRouter.route('/')
             .then((changeRequests) => {
                 res.json(changeRequests)
             })  
-            .catch(err => {
-                console.log(err)
-            })
     })
     .post((req, res) => {
         const changeRequest = new ContentChangeRequest(req.query);
