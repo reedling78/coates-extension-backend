@@ -2,16 +2,16 @@ const express = require('express')
 const ContentChangeRequest = require('./../models/ContentChangeRequest')
 const contentChangeRequestRouter = express.Router()
 
-contentChangeRequestRouter.route('/')
-    .get((req, res) => {
-        ContentChangeRequest.find()
-            .then((changeRequests) => {
-                res.json(changeRequests)
-            })  
-            .catch(err => {
-                console.log(err)
-            })
-    })
+// contentChangeRequestRouter.route('/')
+//     .get((req, res) => {
+//         ContentChangeRequest.find()
+//             .then((changeRequests) => {
+//                 res.json(changeRequests)
+//             })  
+//             .catch(err => {
+//                 console.log(err)
+//             })
+//     })
 
 contentChangeRequestRouter.route('/')
     .post((req, res) => {
