@@ -4,7 +4,6 @@
 
 const express = require('express')
 const app = express()
-const ContentChangeRequest = require('./models/ContentChangeRequest')
 
 const contentChangeRequestRouter = require('./Routes/contentChangeRequest')
 
