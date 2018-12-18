@@ -6,13 +6,15 @@ contentChangeRequestRouter.route('/')
     .get((req, res) => {
         console.log('get worked')
         console.log(ContentChangeRequest)
-        ContentChangeRequest.find()
-            .then((changeRequests) => {
-                res.status(201).send(changeRequests)
-            })  
-            .catch(err => {
-                console.log(err)
-            })
+        ContentChangeRequest.find({}, function(w){
+            console.log(w)
+        })
+            // .then((changeRequests) => {
+            //     res.status(201).send(changeRequests)
+            // })  
+            // .catch(err => {
+            //     console.log(err)
+            // })
     })
 
 contentChangeRequestRouter.route('/')
