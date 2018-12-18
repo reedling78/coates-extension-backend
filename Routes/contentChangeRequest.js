@@ -5,6 +5,7 @@ const contentChangeRequestRouter = express.Router()
 contentChangeRequestRouter.route('/')
     .get((req, res) => {
         console.log('get worked')
+        console.log(ContentChangeRequest)
         ContentChangeRequest.find()
             .then((changeRequests) => {
                 res.status(201).send(changeRequests)
