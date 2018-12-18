@@ -6,9 +6,14 @@ contentChangeRequestRouter.route('/')
     .get((req, res) => {
         console.log('get worked')
         console.log(ContentChangeRequest)
-        ContentChangeRequest.find({}, function(w){
-            console.log(w)
-        })
+
+        ContentChangeRequest.findById('5c19426d68e9e10011a71132', function (err, adventure) {
+            console.log(adventure)
+        });
+
+        // ContentChangeRequest.find({}, function(w){
+        //     console.log(w)
+        // })
             // .then((changeRequests) => {
             //     res.status(201).send(changeRequests)
             // })  
