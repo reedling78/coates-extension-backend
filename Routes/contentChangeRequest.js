@@ -38,10 +38,11 @@ contentChangeRequestRouter.route('/:id')
                 if (err) return res.send(500, { error: err });
                 res.json(doc)
             })
-    }) 
+    })
 
 contentChangeRequestRouter.route('/:id')
     .delete((req, res) => {
+
         ContentChangeRequest
             .findById(req.params.id)
             .then((changeRequest) => {
@@ -66,6 +67,7 @@ contentChangeRequestRouter.route('/:id')
                         })
                     }
                 })
+                
             })
             .catch(err => {
                 res.status(500).json({
@@ -74,6 +76,7 @@ contentChangeRequestRouter.route('/:id')
                     error: err
                 })
             })
+
     }) 
 
 module.exports = contentChangeRequestRouter
