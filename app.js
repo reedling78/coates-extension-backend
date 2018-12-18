@@ -27,12 +27,12 @@ const PORT = process.env.PORT || 3000
 
 
 mongoose
-  .connect('mongodb://localhost:27017/coates-extension')
+  .connect(
+    'mongodb://mongo:27017/coates-extension',
+    { useNewUrlParser: true }
+  )
   .then(() => console.log('MongoDB Connected'))
-  .catch(err => {
-    console.log('-----------------Happened1')
-    console.log(err)
-  });
+  .catch(err => console.log(err));
 
 
 
@@ -40,7 +40,6 @@ mongoose
 
 
 app.get('/', function (req, res) {
-  console.log('something')
   res.sendFile(__dirname + '/index.html');
 });
 
@@ -52,7 +51,8 @@ app.get('/switchboards', (req, res) => {
     .catch(err => res.status(404).json({ 
       msg: 'No switchboards found' 
     }))
-})
+});
+
 
 
 
