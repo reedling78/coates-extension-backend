@@ -2,8 +2,8 @@ const express = require('express')
 const ContentChangeRequest = require('./../models/ContentChangeRequest')
 const contentChangeRequestRouter = express.Router()
 
-contentChangeRequestRouter.route('/')
-    .get((req, res) => {
+contentChangeRequestRouter.route('/wtf')
+    .post((req, res) => {
         console.log('get worked')
         console.log(ContentChangeRequest)
 
