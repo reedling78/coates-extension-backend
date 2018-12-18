@@ -40,6 +40,7 @@ mongoose
 
 
 app.get('/', function (req, res) {
+  console.log('something')
   res.sendFile(__dirname + '/index.html');
 });
 

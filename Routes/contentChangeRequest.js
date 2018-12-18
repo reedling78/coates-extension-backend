@@ -4,6 +4,7 @@ const contentChangeRequestRouter = express.Router()
 
 contentChangeRequestRouter.route('/')
     .get((req, res) => {
+        console.log('get worked')
         ContentChangeRequest.find()
             .then((changeRequests) => {
                 res.status(201).send(changeRequests)
@@ -15,6 +16,7 @@ contentChangeRequestRouter.route('/')
 
 contentChangeRequestRouter.route('/')
     .post((req, res) => {
+        console.log('post worked')
         const changeRequest = new ContentChangeRequest(req.query);
         changeRequest.save();
         console.log(changeRequest)
