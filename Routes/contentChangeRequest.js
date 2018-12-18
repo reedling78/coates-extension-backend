@@ -4,22 +4,13 @@ const contentChangeRequestRouter = express.Router()
 
 contentChangeRequestRouter.route('/wtf')
     .post((req, res) => {
-        console.log('get worked')
-        console.log(ContentChangeRequest)
-
-        ContentChangeRequest.findById('5c19426d68e9e10011a71132', function (err, adventure) {
-            console.log(adventure)
-        });
-
-        // ContentChangeRequest.find({}, function(w){
-        //     console.log(w)
-        // })
-            // .then((changeRequests) => {
-            //     res.status(201).send(changeRequests)
-            // })  
-            // .catch(err => {
-            //     console.log(err)
-            // })
+        ContentChangeRequest.find()
+            .then((changeRequests) => {
+                res.status(201).send(changeRequests)
+            })  
+            .catch(err => {
+                console.log(err)
+            })
     })
 
 contentChangeRequestRouter.route('/')
