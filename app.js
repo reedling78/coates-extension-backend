@@ -52,18 +52,7 @@ app.get('/switchboards', (req, res) => {
     .catch(err => res.status(404).json({ 
       msg: 'No switchboards found' 
     }))
-});
-
-app.get('/api/ContentChangeRequest', (req, res) => {
-  ContentChangeRequest.find()
-    .then((changeRequests) => {
-        res.json(changeRequests)
-    })  
-    .catch(err => {
-        console.log(err)
-    })
-});
-
+})
 
 
 
