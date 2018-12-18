@@ -28,11 +28,14 @@ const PORT = process.env.PORT || 3000
 
 mongoose
   .connect(
-    'mongodb://mongo:27017/coates-extension',
+    'mongodb://mongo:27017/coates-extension-backend',
     { useNewUrlParser: true }
   )
   .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log(err));
+  .catch(err => {
+    console.log('-----------------Happened')
+    console.log(err)
+  });
 
 
 
