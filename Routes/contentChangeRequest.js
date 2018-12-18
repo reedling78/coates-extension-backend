@@ -17,6 +17,7 @@ contentChangeRequestRouter.route('/')
     .post((req, res) => {
         const changeRequest = new ContentChangeRequest(req.query);
         changeRequest.save();
+        console.log(changeRequest)
         res.status(201).send(changeRequest)
     }) 
 
