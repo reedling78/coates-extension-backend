@@ -6,7 +6,7 @@ contentChangeRequestRouter.route('/')
     .get((req, res) => {
         ContentChangeRequest.find()
             .then((changeRequests) => {
-                res.json(changeRequests)
+                res.status(201).send(changeRequests)
             })  
             .catch(err => {
                 console.log(err)
