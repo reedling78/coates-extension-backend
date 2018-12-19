@@ -4,11 +4,12 @@
 
 const express = require('express')
 const app = express()
+const cors = require('cors')
 
 const contentChangeRequestRouter = require('./Routes/contentChangeRequest')
 
 
-
+app.use(cors())
 app.use('/api/ContentChangeRequest', contentChangeRequestRouter)
 
 
