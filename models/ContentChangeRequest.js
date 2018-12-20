@@ -15,44 +15,44 @@ const ContentChangeRequestSchema = new Schema({
     type: String
   },
 
-  storenumber: {
-    type: String
-  },
-
   promoname: {
     type: String
   },
 
   startdate: {
-    type: Date
+    type: String
   },
 
   enddate: {
-    type: Date
+    type: String
   },
 
   requesttype: {
-    type: String
+    type: Array
   },
 
   requestrelatesto: {
-    type: String
+    type: Array
   },
 
   requestdetail: {
     type: String
   },
 
-  lineupsaffected: {
+  islineupsaffected: {
     type: Boolean
+  },
+  
+  lineupsaffecteddetail: {
+    type: String
   },
 
   daypartsaffected: {
-    type: String
+    type: Array
   },
 
   timeofdayaffected: {
-    type: String
+    type: Array
   },
 
   timestamp: {
