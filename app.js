@@ -4,14 +4,16 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 
 const contentChangeRequestRouter = require('./Routes/contentChangeRequest')
+const digitalWhiteboardRouter = require('./Routes/digitalWhiteboard')
 
-app.use( bodyParser.json() );       
+//app.use( bodyParser.json() );       
 app.use(bodyParser.urlencoded({     
-  extended: true
+  extended: false
 })); 
 
 app.use(cors())
 app.use('/api/ContentChangeRequest', contentChangeRequestRouter)
+app.use('/api/DigitalWhiteboard', digitalWhiteboardRouter)
 
 
 const http = require('http').Server(app);
