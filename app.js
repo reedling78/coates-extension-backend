@@ -78,6 +78,15 @@ io.on('connection', function (socket) {
     io.emit('contentcontroller', data);
   });
 
+  socket.on('xpientcontroller', function (data) {
+    console.log('')
+    console.log(colors.green(`Action: ${data.action}`.blue));
+    console.log('Channel: xpientcontroller');
+    console.log(`SubChannel: ${data.subchannel}`.green);
+    console.log('Data: ' + JSON.stringify(data));
+    io.emit('xpientcontroller', data);
+  });
+
   socket.on('extension', function (data) {
     console.log('')
     console.log(colors.green(`Action: ${data.action}`.blue));
